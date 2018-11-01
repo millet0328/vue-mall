@@ -1,5 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+	<div class="about">
+		关于
+		<Tab></Tab>
+	</div>
 </template>
+
+<script>
+	import Tab from '../components/tab/Index'
+	export default {
+		components: {
+			Tab
+		}
+	}
+</script>
+<style>
+
+</style>
