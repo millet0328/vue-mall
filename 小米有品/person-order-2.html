@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<!--自定义CSS文件-->
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/person-order.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="headline">
+				<a href="person-login.html">
+					<img src="img/std_tittlebar.png" />
+				</a>
+				<div class="text">我的订单</div>
+			</div>
+			<ul class="head-list">
+				<div class="bar" style="left: 94px;"></div>
+				<li class="li1">
+					全部订单
+				</li>
+				<li class="active li2">
+					待付款
+				</li>
+				<li class="li3">
+					待收货
+				</li>
+				<li class="li4">
+					退款订单
+				</li>
+				<li class="li5">
+					已收货
+				</li>
+			</ul>
+			<ul class="box-list">
+				<li class="active">
+					<img src="img/std_shop_details_icon_wrong.png"/>
+					<div class="text">目前没有任何订单哦~</div>
+				</li>
+				<li>
+					<img src="img/std_shop_details_icon_wrong.png"/>
+					<div class="text">目前没有待付款订单哦~</div>
+				</li>
+				<li>
+					<img src="img/std_shop_details_icon_wrong.png"/>
+					<div class="text">目前没有待收货订单哦~</div>
+				</li>
+				<li>
+					<img src="img/std_shop_details_icon_wrong.png"/>
+					<div class="text">目前没有退款订单哦~</div>
+				</li>
+				<li>
+					<img src="img/std_shop_details_icon_wrong.png"/>
+					<div class="text">目前没有已收货订单哦~</div>
+				</li>
+			</ul>
+		</div>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var $li = $('.head-list li');
+			$li.click(function() {
+				var index = $(this).index();
+				$(this).siblings().removeClass('active');
+				$(this).addClass('active');
+				$(this).parents('.head-list').siblings('.box-list').find('li').removeClass('active');
+				$(this).parents('.head-list').siblings('.box-list').find('li').eq(index-1).addClass('active');
+			});
+			$(".li1").click(function () {
+				$(this).siblings(".bar").stop(true).animate({
+					left:"17px"
+				},400)
+			});
+			$(".li2").click(function () {
+				$(this).siblings(".bar").stop(true).animate({
+					left:"94px"
+				},400)
+			});
+			$(".li3").click(function () {
+				$(this).siblings(".bar").stop(true).animate({
+					left:"164px"
+				},400)
+			});
+			$(".li4").click(function () {
+				$(this).siblings(".bar").stop(true).animate({
+					left:"240px"
+				},400)
+			});
+			$(".li5").click(function () {
+				$(this).siblings(".bar").stop(true).animate({
+					left:"316px"
+				},400)
+			});
+		</script>
+	</body>
+
+</html>

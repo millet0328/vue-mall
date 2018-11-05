@@ -11,11 +11,11 @@ function getSession(key) {
 	//string=>obj
 	let val = sessionStorage.getItem(key);
 	let value = JSON.parse(val);
-	return value
+	return value || ''
 }
 //判断是否已登录
 function isLogin() {
-	let {uid} = getSession('user');
+	let uid = getSession('uid');
 	return uid ? true : false;
 }
 

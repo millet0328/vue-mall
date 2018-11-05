@@ -1,0 +1,347 @@
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 375px;
+	margin: 0 auto;
+}
+
+.board {
+	position: relative;
+}
+
+.board .logo {
+	display: flex;
+	justify-content: space-around;
+}
+
+.board .logo a {
+	display: block;
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+}
+
+.board .logo .lt-logo {
+	left: 0;
+}
+
+.board .logo .rt-logo {
+	right: 0;
+}
+
+.board .logo a img {
+	width: 100%;
+	height: 100%;
+}
+
+.board .swiper-container {
+	width: 375px;
+	height: 375px;
+}
+
+.board img {
+	height: 100%;
+	width: 100%;
+}
+
+.name-list {
+	padding: 11px 14px 0;
+}
+
+.name-list .name {
+	margin-bottom: 3px;
+	color: rgb(51, 51, 51);
+	font-size: 16px;
+	width: 100%;
+}
+
+.name-list .des {
+	color: rgb(153, 153, 153);
+	font-size: 13px;
+	width: 100%;
+}
+
+.name-list .price-list {
+	display: flex;
+	margin-top: 5px;
+	align-items: flex-end;
+}
+
+.name-list .price-list .price {
+	color: rgb(182, 9, 9);
+	font-size: 13px;
+	margin-right: 2px;
+}
+
+.name-list .price-list .price span {
+	font-size: 24px;
+}
+
+.name-list .price-list del {
+	color: rgb(177, 177, 177);
+	font-size: 14px;
+	text-decoration: line-through;
+	margin-right: 10px;
+}
+
+.name-list .price-list .down {
+	font-size: 11px;
+	color: rgb(182, 9, 9);
+	margin-bottom: 4px;
+}
+
+.name-list .gift {
+	background-color: rgb(247, 240, 218);
+	margin: 12px 0;
+	padding: 0 5px 0 7px;
+}
+
+.name-list .gift a {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 30px;
+}
+
+.name-list .gift .left img {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+.name-list .gift span {
+	color: rgb(51, 51, 51);
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+.name-list .gift .right img {
+	width: 4px;
+	height: 7px;
+	vertical-align: middle;
+}
+
+.support-list {
+	padding: 0 14px 0;
+	height: 41px;
+	border-top: 1px solid rgb(229, 229, 229);
+}
+
+.support-list a {
+	height: 41px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.support-list .flex {
+	height: 41px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.support-list .left {
+	display: flex;
+	align-items: center;
+}
+
+.support-list .text1 {
+	margin-right: 5px;
+	font-size: 12px;
+	color: rgb(153, 153, 153);
+}
+
+.support-list .left img {
+	width: 30px;
+	height: 30px;
+}
+
+.support-list .text2 {
+	font-size: 13px;
+	color: rgb(51, 51, 51);
+}
+
+.support-list .right img {
+	width: 12px;
+	height: 12px;
+}
+
+.support-list .text3 {
+	width: 32px;
+	text-align: center;
+	font-size: 11px;
+	color: rgb(255, 255, 255);
+	height: 18px;
+	background-color: rgb(182, 9, 9);
+}
+
+.support-list .text2-2 {
+	font-size: 13px;
+	color: rgb(182, 9, 9);
+}
+
+.gray-box {
+	background-color: rgb(248, 248, 248);
+	height: 10px;
+	width: 100%;
+}
+
+.explain-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 14px 8px;
+}
+
+.explain-list .left {
+	display: flex;
+	align-items: flex-start;
+}
+
+.explain-list .text1 {
+	margin-right: 5px;
+	font-size: 12px;
+	color: rgb(153, 153, 153);
+}
+
+.explain-list ul li {
+	width: 294px;
+	min-height: 26px;
+	margin: 0 0 3px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.explain-list ul li img {
+	width: 12px;
+	height: 12px;
+	display: block;
+	margin: 2px 5px 0 0;
+}
+
+.explain-list ul li span {
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 13px;
+}
+
+.explain-list .right img {
+	width: 12px;
+	height: 12px;
+}
+
+.big-box .top-box {
+	display: flex;
+	line-height: 40px;
+	font-size: 12px;
+	justify-content: center;
+}
+
+.big-box .top-box li {
+	color: rgb(102, 102, 102);
+	font-weight: normal;
+	width: 93.75px;
+	text-align: center;
+}
+
+.big-box .top-box .active {
+	color: rgb(159, 130, 87);
+	font-weight: bold;
+}
+
+.big-box .bottom-box li {
+	display: none;
+}
+
+.big-box .bottom-box .active {
+	display: block;
+}
+
+.big-box .bottom-box .border {
+	width: 100%;
+	height: 1px;
+	background: rgb(191, 191, 192);
+}
+
+.big-box .bottom-box img {
+	display: block;
+	width: 100%;
+}
+
+.foot-fixed {
+	position: fixed;
+	z-index: 100;
+	height: 52px;
+	width: 100%;
+	background: white;
+	bottom: 0;
+}
+
+.foot {
+	padding: 0 7px 0 7px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 52px;
+	border-top: 1px solid rgb(191, 191, 192);
+}
+.foot li{
+	position: relative;
+	height: 38px;
+}
+.foot .text {
+	width: 62.5px;
+	text-align: center;
+}
+
+.foot li img {
+	width: 20px;
+	height: 20px;
+}
+.foot li.collect img{
+	position: absolute;
+	left: 20px;
+	top: 0;
+}
+.foot li .red{
+	display: none;
+}
+.foot li.collect span{
+	position: absolute;
+	left: 18px;
+	bottom: 0;
+}
+.foot li span {
+	display: block;
+	color: rgb(122, 122, 122);
+	font-size: 10px;
+}
+
+.foot .buy {
+	font-size: 14px;
+	color: white;
+	background-color: rgb(182, 9, 9);
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	width: 111px;
+	border-radius: 16px;
+	margin-right: 5px;
+}
+
+.foot .add {
+	font-size: 14px;
+	color: white;
+	background-color: rgb(171, 138, 89);
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	width: 111px;
+	border-radius: 16px;
+}

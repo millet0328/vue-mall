@@ -1,0 +1,224 @@
+.container {
+	width: 100%;
+	max-width: 375px;
+	margin: 0 auto;
+	background-color: rgb(243, 243, 243);
+}
+
+.headline {
+	width: 375px;
+	height: 100px;
+	background: url(../img/personal_bg_top.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.headline a {
+	width: 375px;
+	height: 100px;
+	display: block;
+	display: flex;
+	align-items: center;
+}
+
+.headline .logo {
+	margin-left: 25px;
+}
+
+.headline .logo img {
+	width: 60px;
+	height: 60px;
+}
+
+.headline .text {
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+	margin-left: 20px;
+}
+
+.headline .arrow {
+	margin-left: 190px;
+}
+
+.headline .arrow img {
+	width: 18px;
+	height: 18px;
+}
+
+.my-orders {
+	width: 345px;
+	height: 40px;
+	padding-left: 20px;
+	padding-right: 10px;
+	background: white;
+	margin-top: 5px;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.my-orders a {
+	width: 345px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.my-orders .text {
+	color: rgb(51, 51, 51);
+	font-size: 14px;
+}
+
+.my-orders .arrow img {
+	width: 15px;
+	height: 15px;
+}
+
+.logo-list {
+	background: white;
+	width: 375px;
+	height: 69px;
+}
+
+.logo-list a {
+	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 375px;
+	height: 69px;
+}
+
+.logo-list li {
+	width: 93.75px;
+	text-align: center;
+}
+
+.logo-list img {
+	width: 23px;
+	height: 23px;
+}
+
+.logo-list .text {
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.new-banner img {
+	width: 375px;
+	height: 83px;
+}
+
+.item {
+	width: 345px;
+	height: 50px;
+	padding-left: 20px;
+	padding-right: 10px;
+	background: white;
+	position: relative;
+}
+
+.item a {
+	width: 345px;
+	height:50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.item a .left {
+	display: flex;
+	align-items: center;
+}
+
+.item .logo img {
+	width: 38px;
+	height: 38px;
+}
+
+.item .text {
+	color: rgb(51, 51, 51);
+	font-size: 14px;
+}
+
+.item .des {
+	color: rgb(153, 153, 153);
+	font-size: 12px;
+	margin-left: 166px;
+}
+
+.item .arrow img {
+	width: 15px;
+	height: 15px;
+}
+
+.item .border {
+	width: 365px;
+	height: 1px;
+	background: rgb(229, 229, 229);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.item1 {
+	margin-bottom: 5px;
+}
+
+
+
+.footer-fixed {
+	width: 100%;
+	height: 50px;
+}
+
+.footer-fixed .footer {
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+}
+
+.footer-fixed .footer ul {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 5px;
+}
+.footer-fixed .footer li {
+	text-align: center;
+}
+.footer-fixed .footer li .text {
+	font-size: 12px;
+	color: rgb(132, 95, 63);
+}
+
+.footer-fixed .icon {
+	background: url(../img/xuebi.png);
+	width: 24px;
+	height: 24px;
+	background-size: 100%;
+	display: inline-block;
+}
+
+.footer-fixed .icon1 {
+	background-position: 0 0%;
+}
+
+.footer-fixed .icon2 {
+	background-position: 0 22.222222%;
+}
+
+.footer-fixed .icon3 {
+	background-position: 0 44.444444%;
+}
+
+.footer-fixed .icon4 {
+	background-position: 0 66.666667%;
+}
+
+.footer-fixed .icon5 {
+	background-position: 0 100%;
+}

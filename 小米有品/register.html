@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<!--自定义CSS文件-->
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="head">
+				注册小米帐号
+			</div>
+			<div class="padding">
+				<div class="place">
+					<span>中国</span>
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<div class="place-des">
+					成功注册帐号后，国家/地区将不能被修改
+				</div>
+				<div class="num">
+					<span>+86</span>&nbsp;&nbsp;
+					<i class="fa fa-angle-right"></i>
+					<input type="tel" class="tel" name="" id="" value="" placeholder="请输入手机号码" />
+				</div>
+				<div class="btn">
+					<a href="proof.html">
+						<input type="submit" name="" id="" value="立即注册" />
+					</a>
+				</div>
+				<div class="agree">
+					<i class="fa fa-check-circle i1"></i>
+					<i class="fa fa-circle-thin i2"></i>
+					<span>注册帐号即表示您同意并愿意遵守小米</span>
+					<a href="">用户协议</a>和
+					<a href="">隐私政策</a>
+				</div>
+			</div>
+			<div class="fonts">
+				<a href="register.html" class="active">简体</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="register.html">繁体</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="register.html">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="">常见问题</a>
+			</div>
+		</div>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".agree .i1").click(function() {
+				$(this).css("display", "none"),
+					$(".agree .i2").css("display", "block")
+			})
+			$(".agree .i2").click(function() {
+				$(this).css("display", "none"),
+					$(".agree .i1").css("display", "block")
+			})
+		</script>
+	</body>
+
+</html>

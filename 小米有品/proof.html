@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<!--自定义CSS文件-->
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/proof.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="head">
+				注册小米帐号
+			</div>
+			<div class="padding">
+				<div class="text">
+					<p>我们已经发送一条验证短信至<span>+86 18888888888</span></p>
+					<p>请输入短信中的验证码</p>
+				</div>
+				<div class="proof">
+					<input type="number"  name="" id="" value="" placeholder="请输入验证码" />
+					<a href="">重新发送</a>
+				</div>
+				<div class="next-btn">
+					<input type="submit" name="" id="" value="下一步" />
+				</div>
+				<div class="back-btn">
+					<a href="">返回</a>
+				</div>
+			</div>
+			<div class="fonts">
+				<a href="register.html" class="active">简体</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="register.html">繁体</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="register.html">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="">常见问题</a>
+			</div>
+		</div>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".agree .i1").click(function () {
+				$(this).css("display","none"),
+				$(".agree .i2").css("display","block")
+			})
+			$(".agree .i2").click(function () {
+				$(this).css("display","none"),
+				$(".agree .i1").css("display","block")
+			})
+		</script>
+	</body>
+
+</html>

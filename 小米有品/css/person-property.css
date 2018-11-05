@@ -1,0 +1,77 @@
+.container {
+	width: 100%;
+	max-width: 375px;
+	margin: 0 auto;
+}
+
+.headline {
+	height: 45px;
+	display: flex;
+	background: white;
+	border-bottom: 2px solid rgb(191, 191, 192);
+}
+
+.headline img {
+	width: 39px;
+	height: 100%;
+}
+
+.headline .text {
+	color: rgb(51, 51, 51);
+	font-size: 16px;
+	width: 285px;
+	text-align: center;
+	line-height: 45px;
+}
+
+.item {
+	width: 345px;
+	height: 50px;
+	padding-left:15px;
+	padding-right: 10px;
+	background: white;
+	position: relative;
+}
+
+.item a {
+	width: 345px;
+	height:50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.item a .left {
+	display: flex;
+	align-items: center;
+}
+
+.item .logo img {
+	width: 38px;
+	height: 38px;
+}
+
+.item .text {
+	color: rgb(51, 51, 51);
+	font-size: 14px;
+}
+
+.item .des {
+	color: rgb(153, 153, 153);
+	font-size: 12px;
+	margin-left: 166px;
+}
+
+.item .arrow img {
+	width: 15px;
+	height: 15px;
+}
+
+.item .border {
+	width: 365px;
+	height: 1px;
+	background: rgb(229, 229, 229);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}

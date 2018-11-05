@@ -1,0 +1,134 @@
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 375px;
+	margin: 0 auto;
+}
+
+.headline {
+	height: 45px;
+	display: flex;
+	background: white;
+	border-bottom: 2px solid rgb(191, 191, 192);
+}
+
+.headline img {
+	width: 39px;
+	height: 100%;
+}
+
+.headline .text {
+	color: rgb(51, 51, 51);
+	font-size: 16px;
+	width: 285px;
+	text-align: center;
+	line-height: 45px;
+}
+
+.box {
+	background: rgb(250, 250, 250);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 148px;
+}
+
+.box .right {
+	margin-left: 20px;
+}
+
+.box .pic img {
+	width: 91px;
+	height: 85px;
+}
+
+.box .text {
+	color: rgb(152, 131, 120);
+	font-size: 14px;
+}
+
+.box .go {
+	width: 77px;
+	height: 23px;
+	font-size: 13px;
+	color: rgb(250, 250, 252);
+	text-align: center;
+	line-height: 23px;
+	background-color: rgb(226, 115, 104);
+	display: block;
+	margin-top: 12px;
+}
+
+.recommend {
+	font-size: 15px;
+	color: rgb(51, 51, 51);
+	width: 100%;
+	text-align: center;
+	height: 56px;
+	line-height: 56px;
+}
+
+.list {
+	padding: 0 6px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.list li {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.list .pic {
+	width: 172.5px;
+	height: 172.5px;
+	text-align: center;
+	line-height: 172.5px;
+	border-radius: 2px;
+}
+
+.list .pic img {
+	width: 142.5px;
+	width: 142.5px;
+	vertical-align: middle;
+}
+
+.list .cover {
+	width: 172.5px;
+	height: 172.5px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.02);
+}
+
+.list .des {
+	background-color: rgb(245, 242, 240);
+	width: 100%;
+	color: rgb(159, 128, 82);
+	font-size: 12px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 2px;
+}
+
+.list .text {
+	font-size: 13px;
+	color: rgb(51, 51, 51);
+	margin: 10px 0;
+}
+
+.list .price {
+	color: rgb(182, 9, 9);
+	font-size: 10px;
+}
+
+.list .price span {
+	font-size: 15px;
+}

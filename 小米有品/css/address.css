@@ -1,0 +1,256 @@
+@charset "utf-8";
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.nav {
+	font-size: 4.2vw;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 12vw;
+	line-height: 12vw;
+	background-color: white;
+	border-bottom: 2px solid rgb(191, 191, 192);
+}
+
+.nav .fa-chevron-left {
+	margin-left: 10px;
+}
+
+.nav span {
+	margin-left: 36vw;
+}
+
+.adjblock li {
+	display: none;
+}
+
+.adjblock li.active {
+	display: block;
+}
+
+
+/*收货地址*/
+
+.addressbox {
+	width: 100%;
+	height: 160.47vw;
+	margin-top: 12vw;
+}
+
+.addressbox .itemlist {
+	width: 100%;
+	height: 88%;
+	margin: 0;
+}
+
+.addressbox .addbtn {
+	width: 92vw;
+	margin:2vw 4vw;
+	text-align: center;
+	color: rgb(132, 95, 63);
+	border: 1px solid rgb(132, 95, 63);
+	border-radius: 4px;
+	font-size: 3.73vw;
+	background-color: #FFFFFF;
+	padding: 13px;
+}
+
+.addressbox .itemlist .item {
+	display: block;
+	width: 100%;
+	height: 26.67vw;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.addressbox .item .addresscon {
+	width: 80%;
+	height: 26.67vw;
+	padding: 3%;
+	margin-left: 5%;
+}
+
+.addressbox .item .addresscon .top {
+	font-size: 4vw;
+}
+
+.addressbox .item .addresscon .bot {
+	font-size: 3.2vw;
+	margin-top: 10px;
+}
+
+.addressbox .item .edit {
+	width: 15%;
+	height: 26.67vw;
+	line-height: 26.67vw;
+	text-align: center;
+}
+
+.addressbox .item .edit img {
+	display: inline-block;
+	width: 4.53vw;
+}
+
+
+/*新增地址*/
+
+.addnewaddress {
+	width: 100%;
+	height: 160.47vw;
+	margin-top: 54px;
+	background-color: #EEEEEE;
+}
+
+.addnewaddress .from {
+	width: 100%;
+	height: 88%;
+	margin: 0;
+}
+
+.addnewaddress .save {
+	width: 92vw;
+	margin: 4vw;
+	text-align: center;
+	color: rgb(132, 95, 63);
+	border: 1px solid rgb(132, 95, 63);
+	border-radius: 4px;
+	font-size: 3.73vw;
+	background-color: #FFFFFF;
+	padding: 13px;
+}
+
+.addnewaddress .line {
+	background-color: #FFFFFF;
+	color: rgb(51, 51, 51);
+	width: 100%;
+	padding: 0 5.3vw;
+}
+
+.addnewaddress .line .linecon {
+	width: 100%;
+	padding: 5.3vw 0;
+	border-bottom: 1px solid rgb(191, 191, 192);
+}
+
+.addnewaddress .line .linecon.last {
+	border-bottom: 0;
+}
+
+.addnewaddress .default {
+	margin-top: 10px;
+	background-color: #FFFFFF;
+	color: rgb(51, 51, 51);
+	width: 100%;
+	padding: 5.3vw;
+}
+
+.addnewaddress .line .region {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 5.3vw 0;
+	border-bottom: 1px solid rgb(191, 191, 192);
+}
+
+.addnewaddress .line>lable {
+	display: inline-block;
+	width: 23%;
+	text-align: left;
+}
+
+.addnewaddress .line input {
+	border: 0;
+	/*margin-left: 10px;*/
+	outline: none;
+}
+
+
+/*编辑地址*/
+
+.editnewaddress {
+	width: 100%;
+	height: 160.47vw;
+	margin-top: 54px;
+	background-color: #EEEEEE;
+}
+
+.editnewaddress .from {
+	width: 100%;
+	height: 88%;
+	margin: 0;
+}
+
+.editnewaddress .save {
+	width: 92vw;
+	margin: 4vw;
+	text-align: center;
+	color: rgb(132, 95, 63);
+	border: 1px solid rgb(132, 95, 63);
+	border-radius: 4px;
+	font-size: 3.73vw;
+	background-color: #FFFFFF;
+	padding: 13px;
+}
+
+.editnewaddress .line {
+	background-color: #FFFFFF;
+	color: rgb(51, 51, 51);
+	width: 100%;
+	padding: 0 5.3vw;
+}
+
+.editnewaddress .line .linecon {
+	width: 100%;
+	padding: 5.3vw 0;
+	border-bottom: 1px solid rgb(191, 191, 192);
+}
+
+.editnewaddress .line .linecon.last {
+	border-bottom: 0;
+}
+
+.editnewaddress .default {
+	margin-top: 10px;
+	background-color: #FFFFFF;
+	color: rgb(51, 51, 51);
+	width: 100%;
+	padding: 5.3vw;
+}
+
+.editnewaddress .line .region {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 5.3vw 0;
+	border-bottom: 1px solid rgb(191, 191, 192);
+}
+
+.editnewaddress .line>lable {
+	display: inline-block;
+	width: 23%;
+	text-align: left;
+}
+
+.editnewaddress .line input {
+	border: 0;
+	margin-left: 10px;
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: darkgrey;
+}

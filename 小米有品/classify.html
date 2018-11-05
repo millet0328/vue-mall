@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<!--自定义CSS文件-->
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/classify.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="head-fixed">
+				<div class="head">
+					<div class="serch">
+						<a href="search.html">
+							<img src="img/3331492_2093810242.png" />
+							<span>小米8</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="big-box">
+				<div class="left-box">
+					<ul class="list">
+						<li class="active">
+							有品推荐
+						</li>
+						<li>
+							家居家纺
+						</li>
+						<li>
+							家用电器
+						</li>
+						<li>
+							智能家庭
+						</li>
+						<li>
+							餐具厨房
+						</li>
+					</ul>
+				</div>
+				<div class="right-box">
+					<ul class="list">
+						<li class="active">
+							<div class="banner">
+								<img src="img/sasasz.png" />
+							</div>
+							<ul class="item-list">
+								<li class="item">
+									<div class="pic">
+										<img src="img/aszz.png" />
+									</div>
+									<div class="des">每日上新</div>
+								</li>
+								<li class="item">
+									<div class="pic">
+										<img src="img/zzzxaa.png" />
+									</div>
+									<div class="des">小米自营</div>
+								</li>
+								<li class="item">
+									<div class="pic">
+										<img src="img/zZcca.png" />
+									</div>
+									<div class="des">开学必备</div>
+								</li>
+							</ul>
+							<ul class="item-list">
+								<li class="item">
+									<div class="pic">
+										<img src="img/qqq.png" />
+									</div>
+									<div class="des">男士精选</div>
+								</li>
+								<li class="item">
+									<div class="pic">
+										<img src="img/qwas.png" />
+									</div>
+									<div class="des">女神范</div>
+								</li>
+								<li class="item">
+									<div class="pic">
+										<img src="img/xzxzx.png" />
+									</div>
+									<div class="des">秋季出游</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="banner">
+								<img src="img/qqqzza.png" />
+							</div>
+							<ul class="item-list">
+								<li class="item">
+									<div class="pic">
+										<img src="img/xzxzx.png" />
+									</div>
+									<div class="des">每日上新</div>
+								</li>
+								<li class="item">
+									<div class="pic">
+										<img src="img/xzxzx.png" />
+									</div>
+									<div class="des">小米自营</div>
+								</li>
+								<li class="item">
+									<div class="pic">
+										<img src="img/xzxzx.png" />
+									</div>
+									<div class="des">开学必备</div>
+								</li>
+							</ul>
+							<ul class="item-list">
+								<li class="item">
+									<div class="pic">
+										<img src="img/xzxzx.png" />
+									</div>
+									<div class="des">男士精选</div>
+								</li>
+								<li class="item">
+									<div class="pic">
+										<img src="img/xzxzx.png" />
+									</div>
+									<div class="des">女神范</div>
+								</li>
+								<li class="item">
+									<div class="pic">
+										<img src="img/xzxzx.png" />
+									</div>
+									<div class="des">秋季出游</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-fixed">
+				<div class="footer">
+					<ul>
+						<li>
+							<a href="index.html">
+								<div class="icon icon1"></div>
+								<div class="text">首页</div>
+							</a>
+						</li>
+						<li>
+							<a href="classify.html">
+								<div class="icon icon2"></div>
+								<div class="text">分类</div>
+							</a>
+						</li>
+						<li>
+							<a href="taste.html">
+								<div class="icon icon3"></div>
+								<div class="text">品味</div>
+							</a>
+						</li>
+						<li>
+							<a href="shopping-car.html">
+								<div class="icon icon4"></div>
+								<div class="text">购物车</div>
+							</a>
+						</li>
+						<li>
+							<a href="person.html">
+								<div class="icon icon5"></div>
+								<div class="text">个人</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var $li = $('.left-box ul li');
+			$li.click(function() {
+				var index = $(this).index();
+				$(this).siblings().removeClass('active');
+				$(this).addClass('active');
+				$(this).parents('.left-box').siblings('.right-box').find('.list>li').removeClass('active');
+				$(this).parents('.left-box').siblings('.right-box').find('.list>li').eq(index).addClass('active');
+			});
+		</script>
+	</body>
+
+</html>

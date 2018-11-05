@@ -1,0 +1,199 @@
+.container {
+	width: 100%;
+	max-width: 375px;
+	margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
+.head {
+	color: rgb(51, 51, 51);
+	font-size: 16px;
+	text-align: center;
+	width: 100%;
+	line-height: 45px;
+	border-bottom: 2px solid rgb(191, 191, 192);
+	height: 45px;
+	margin-bottom: 10px;
+}
+
+.board {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.board .swiper-container {
+	width: 375px;
+	height: 171.5px;
+}
+
+.board .swiper-slide {
+	text-align: right;
+	width: 343px;
+}
+
+.board img {
+	height: 100%;
+	width: 100%;
+	border-radius: 6px;
+}
+
+.gray-box {
+	height: 10px;
+	width: 100%;
+	background-color: rgb(245, 245, 245);
+}
+
+.recommend-list .overflow {
+	width: 100%;
+	overflow-x: scroll;
+}
+
+.recommend-list ul {
+	display: flex;
+	width: 400px;
+	max-width: 400px;
+	justify-content: space-between;
+}
+
+.recommend-list li {
+	height: 102px;
+	width: 240px;
+	margin-left: 10px;
+}
+
+.recommend-list li .pic {
+	height: 60px;
+	width: 70px;
+}
+
+.recommend-list li .pic img {
+	width: 100%;
+	height: 100%;
+	border-radius: 2px;
+}
+
+.recommend-list li .name {
+	color: rgb(51, 51, 51);
+	font-size: 11px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.column-list .headline {
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.column-list .headline a {
+	color: rgb(51, 51, 51);
+}
+
+.column-list li {
+	margin-bottom: 20px;
+}
+
+.column-list .pic {
+	width: 100%;
+	height: 172.5px;
+	text-align: center;
+}
+
+.column-list .pic img {
+	width: 345px;
+	height: 172.5px;
+	border-radius: 2px;
+}
+
+.column-list .text {
+	color: rgb(51, 51, 51);
+	font-size: 16.6667px;
+	margin-top: 20.8333px;
+	width: 100%;
+	text-align: center;
+}
+
+.column-list .des {
+	color: rgb(153, 153, 153);
+	font-size: 13px;
+	margin-top: 7.98611px;
+	width: 100%;
+	text-align: center;
+}
+
+.column-list .go {
+	background-color: rgb(132, 95, 63);
+	border-radius: 2.08333px;
+	height: 27.0833px;
+	line-height: 27.0833px;
+	width: 66.6667px;
+	color: rgb(255, 255, 255);
+	font-size: 13.5417px;
+	text-align: center;
+	margin: 10.4167px auto 0;
+}
+
+.footer-fixed {
+	width: 100%;
+	height: 50px;
+	background-color: white;
+}
+
+.footer-fixed .footer {
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	border-top: thin solid #b0b0b0;
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+}
+
+.footer-fixed .footer ul {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 5px;
+}
+
+.footer-fixed .footer li {
+	text-align: center;
+}
+
+.footer-fixed .footer li .text {
+	font-size: 12px;
+	color: rgb(132, 95, 63);
+}
+
+.footer-fixed .icon {
+	background: url(../img/xuebi.png);
+	width: 24px;
+	height: 24px;
+	background-size: 100%;
+	display: inline-block;
+}
+
+.footer-fixed .icon1 {
+	background-position: 0 0%;
+}
+
+.footer-fixed .icon2 {
+	background-position: 0 22.222222%;
+}
+
+.footer-fixed .icon3 {
+	background-position: 0 55.555556%;
+}
+
+.footer-fixed .icon4 {
+	background-position: 0 66.666667%;
+}
+
+.footer-fixed .icon5 {
+	background-position: 0 88.888889%;
+}
