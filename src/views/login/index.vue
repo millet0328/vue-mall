@@ -12,16 +12,15 @@
 					<span>+86</span>&nbsp;&nbsp;
 					<i class="fa fa-angle-right"></i>
 				</p>
-				<input type="tel" name="" id="" value="" placeholder="手机号码" />
+				<input type="tel" name="" v-model='tel' placeholder="手机号码" />
 			</div>
-			<div class="proof">
-				<input type="number" name="" id="" value="" placeholder="短信验证码" />
-				<a href="">获取验证码</a>
+			<div class="num">
+				<span>密码 </span>
+				<i class="fa fa-angle-right"></i>
+				<input type="password" class="tel" name="" v-model="password" placeholder="请输入登录密码" />
 			</div>
 			<div class="btn">
-				<a href="person-login.html">
-					<input type="submit" name="" id="" value="立即登录" />
-				</a>
+				<input type="button" @click="registerHandle" name="" value="立即登录" />
 			</div>
 			<div class="name-btn">
 				<router-link to='/register'>注册</router-link>
@@ -47,7 +46,29 @@
 </template>
 
 <script>
-	
+	import { setSession } from '@/assets/js/app';
+	export default {
+		data() {
+			return {
+				tel: '',
+				password: '',
+			}
+		},
+		methods: {
+			registerHandle() {
+				this.axios.post('/users/login', {
+						username: this.tel,
+						password: this.password
+					})
+					.then((result) => {
+						//存储session
+						setSession('uid', result.data.data.id)
+						//跳转页面
+						this.$router.push('/');
+					})
+			}
+		}
+	}
 </script>
 
 <style lang="scss" scoped>

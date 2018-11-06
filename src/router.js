@@ -9,6 +9,8 @@ import Cart from './views/cart/index.vue'
 import User from './views/user/index.vue'
 import UserOrder from './views/user/order/index.vue'
 import UserAddress from './views/user/address/index.vue'
+import UserAddressAdd from './views/user/address/add.vue'
+import UserAddressEdit from './views/user/address/edit.vue'
 import Login from './views/login/index.vue'
 import Register from './views/register/index.vue'
 
@@ -51,6 +53,21 @@ let router = new Router({
 		path: '/user/address',
 		name: 'userAddress',
 		component: UserAddress,
+		meta: {
+			requiresAuth: true
+		}
+	}, {
+		path: '/user/address/add',
+		name: 'UserAddressAdd',
+		component: UserAddressAdd,
+		meta: {
+			requiresAuth: true
+		}
+	}, {
+		path: '/user/address/edit/:id',
+		name: 'UserAddressEdit',
+		component: UserAddressEdit,
+		props: true,
 		meta: {
 			requiresAuth: true
 		}

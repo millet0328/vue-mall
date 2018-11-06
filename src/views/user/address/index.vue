@@ -1,49 +1,44 @@
 <template>
 	<div class="container">
-		<ul class="adjblock">
-			<li class="shippingaddress active">
-				<div class="nav clearfix">
-					<a href="../confirm/confirm.html">
-						<i class="fa fa-chevron-left fl"></i>
-					</a>
-					<span>收货地址</span>
-				</div>
-				<div class="addressbox">
-					<ul id="itemlist" class="itemlist">
-						<li v-for="item in list" class="item clearfix">
-							<div class="addresscon pull-left">
-								<div class="top clearfix">
-									<div id="newname" class="name pull-left">
-										{{item.name}}
-									</div>
-									<div class="tel pull-right">
-										{{item.tel}}
-									</div>
-								</div>
-								<div class="bot">
-									<div class="adres">
-										<span>{{item.province}}省{{item.city}}市{{item.area}}</span>
-										<span class="address">{{item.street}}</span>
-									</div>
-									<div class="postnum">
-										266041
-									</div>
-								</div>
+		<HeaderTitle title="收货地址"></HeaderTitle>
+		<div class="addressbox">
+			<ul id="itemlist" class="itemlist">
+				<li v-for="item in list" class="item clearfix">
+					<div class="addresscon pull-left">
+						<div class="top clearfix">
+							<div id="newname" class="name pull-left">
+								{{item.name}}
 							</div>
-							<div class="edit pull-right">
-								<img class="editicon" id="edit" src="../../../assets/img/address_icon_editor.png" />
+							<div class="tel pull-right">
+								{{item.tel}}
 							</div>
-						</li>
-					</ul>
-					<button id="addbtn" class="addbtn">+添加地址 </button>
-				</div>
-			</li>
-		</ul>
+						</div>
+						<div class="bot">
+							<div class="adres">
+								<span>{{item.province}}省{{item.city}}市{{item.area}}</span>
+								<span class="address">{{item.street}}</span>
+							</div>
+							<div class="postnum">
+								{{item.code}}
+							</div>
+						</div>
+					</div>
+					<div class="action pull-right">
+						<router-link :to="{ name: 'UserAddressEdit', params: { id: item.id }}">
+							<img class="edit" src="../../../assets/img/address_icon_editor.png" />
+						</router-link>
+						<div @click="deleteHandle(item.id)" class="del">×</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<router-link class="addbtn" to="/user/address/add">+添加地址</router-link>
 	</div>
 </template>
 
 <script>
 	import { getSession } from '@/assets/js/app';
+	import HeaderTitle from "@/components/HeaderTitle";
 	export default {
 		data() {
 			return {
@@ -51,57 +46,51 @@
 				msg: ''
 			}
 		},
-		created() {
-			//初始数据获取
-			this.axios.get('/users/addressList', {
-				params: {
-					uid: getSession('uid')
-				}
-			}).then((result) => {
-				if(result.data.status) {
-					this.list = result.data.data
-				} else {
-					this.msg = result.data.msg;
-				}
-			})
+		components: {
+			HeaderTitle
 		},
+		created() {
+			this.getAddressList();
+		},
+		methods: {
+			getAddressList: function() {
+				//初始数据获取
+				this.axios.get('/users/address/list', {
+					params: {
+						uid: getSession('uid')
+					}
+				}).then((result) => {
+					if(result.data.status) {
+						this.list = result.data.data
+					} else {
+						this.msg = result.data.msg;
+					}
+				})
+			},
+			//删除收货地址
+			deleteHandle: function(id) {
+				this.axios.post("/users/address/delete/", {
+						id: id
+					})
+					.then((result) => {
+						if(result.data.status) {
+							//方法一：数组删除
+							//方法二：重新获取数据
+							this.getAddressList();
+						} else {
+							alert(result.data.msg);
+						}
+					})
+			}
+		}
 	}
 </script>
 
 <style lang="scss" scoped>
-	.nav {
-		font-size: 4.2vw;
-		position: fixed;
-		top: 0;
-		z-index: 10;
-		width: 100%;
-		height: 12vw;
-		line-height: 12vw;
-		background-color: white;
-		border-bottom: 2px solid rgb(191, 191, 192);
-	}
-	
-	.nav .fa-chevron-left {
-		margin-left: 10px;
-	}
-	
-	.nav span {
-		margin-left: 36vw;
-	}
-	
-	.adjblock li {
-		display: none;
-	}
-	
-	.adjblock li.active {
-		display: block;
-	}
 	/*收货地址*/
 	
 	.addressbox {
 		width: 100%;
-		height: 160.47vw;
-		margin-top: 12vw;
 	}
 	
 	.addressbox .itemlist {
@@ -110,9 +99,13 @@
 		margin: 0;
 	}
 	
-	.addressbox .addbtn {
-		width: 92vw;
-		margin: 2vw 4vw;
+	.addbtn {
+		position: fixed;
+		bottom: 2vw;
+		left: 0;
+		right: 0;
+		width: 85vw;
+		margin: 0 auto;
 		text-align: center;
 		color: rgb(132, 95, 63);
 		border: 1px solid rgb(132, 95, 63);
@@ -120,6 +113,7 @@
 		font-size: 3.73vw;
 		background-color: #FFFFFF;
 		padding: 13px;
+		display: block;
 	}
 	
 	.addressbox .itemlist .item {
@@ -130,7 +124,6 @@
 	
 	.addressbox .item .addresscon {
 		width: 80%;
-		height: 26.67vw;
 		padding: 3%;
 	}
 	
@@ -143,14 +136,17 @@
 		margin-top: 10px;
 	}
 	
-	.addressbox .item .edit {
+	.addressbox .item .action {
 		width: 14%;
-		height: 26.67vw;
-		line-height: 26.67vw;
+		line-height: 48px;
 		text-align: center;
+		.del {
+			font-size: 21px;
+			color: #CCCCCC;
+		}
 	}
 	
-	.addressbox .item .edit img {
+	.addressbox .item .action img {
 		display: inline-block;
 		width: 4.53vw;
 	}

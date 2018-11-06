@@ -17,7 +17,7 @@
 				<input type="tel" class="tel" name="" v-model='tel' placeholder="请输入手机号码" />
 			</div>
 			<div class="num">
-				<span>密码：</span>
+				<span>密码 </span>
 				<i class="fa fa-angle-right"></i>
 				<input type="password" class="tel" name="" v-model="password" placeholder="请输入登录密码" />
 			</div>
@@ -54,7 +54,7 @@
 		methods: {
 			registerHandle() {
 				this.axios.post('/users/register', {
-						tel: this.tel,
+						username: this.tel,
 						password: this.password
 					})
 					.then((result)=>{
