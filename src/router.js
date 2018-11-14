@@ -13,6 +13,7 @@ import UserAddressAdd from './views/user/address/add.vue'
 import UserAddressEdit from './views/user/address/edit.vue'
 import Login from './views/login/index.vue'
 import Register from './views/register/index.vue'
+import GoodsList from './views/goods/list.vue'
 
 Vue.use(Router)
 
@@ -31,6 +32,10 @@ let router = new Router({
 		path: '/taste',
 		name: 'taste',
 		component: Taste
+	}, {
+		path: '/goods/list/:id',
+		name: 'GoodsList',
+		component: GoodsList
 	}, {
 		path: '/cart',
 		name: 'cart',
