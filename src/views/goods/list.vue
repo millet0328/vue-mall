@@ -1,16 +1,18 @@
 <template>
 	<div class="container">
-		<HeaderTitle title="商品列表"></HeaderTitle>
-		<listtab></listtab>
-		<div class="listcontent">
-			<ul class="itemlist clearfix">
-				<li class="item">
+		<div class="fixed-bar">
+			<HeaderTitle title="商品列表"></HeaderTitle>
+			<listtab></listtab>
+		</div>
+		<div class="wrapper">
+			<ul class="goodsList content">
+				<li v-for="item in list" class="item">
 					<div class="top">
 						<div class="photo">
-							<img src="../../assets/img/d5961b4e4c32cddc6aaeecc28ac31f2b.png" />
+							<img :src="item.img_md" />
 						</div>
 						<div class="hotPoint">
-							偏硬睡感更护脊，进口黄麻更环保
+							{{item.hotPoint}}
 						</div>
 					</div>
 					<div class="bom">
@@ -18,11 +20,11 @@
 							<span class="icon">直降</span>
 						</div>
 						<div class="title">
-							8H成人健康护脊床垫MH
+							{{item.name}}
 						</div>
 						<div class="price">
 							<span class="priicon">￥</span>
-							<span class="prinum">1699</span>
+							<span class="prinum">{{item.price}}</span>
 							<span class="priicon">起</span>
 						</div>
 					</div>
@@ -35,72 +37,108 @@
 <script>
 	import listtab from "./listtab";
 	import HeaderTitle from "@/components/HeaderTitle";
+	import BScroll from 'better-scroll';
 	export default {
 		components: {
 			listtab,
 			HeaderTitle
+		},
+		props: ['id'],
+		data() {
+			return {
+				list: [], //商品列表
+				i: 1,
+				isUpLoad: false,
+			}
+		},
+		created() {
+			this.getGoodsList(1)
+				.then((result) => {
+					this.list = result.data.data;
+				});
+		},
+		mounted() {
+			this.$nextTick(() => {
+				if(!this.scroll) {
+					this.scroll = new BScroll('.wrapper', {
+						click: true,
+						pullDownRefresh: true, //下拉刷新
+						pullUpLoad: true //上拉加载
+					});
+				} else {
+					this.scroll.refresh();
+				}
+				//下拉刷新
+				this.scroll.on('pullingDown', () => {
+					this.isUpLoad = false;
+					this.i = 1;
+					this.getGoodsList(1)
+						.then((result) => {
+							this.list = result.data.data;
+							this.scroll.finishPullDown();
+							this.scroll.refresh(); //刷新组件
+						});
+				});
+				//上拉加载
+				this.scroll.on('pullingUp', () => {
+					this.isUpLoad = true;
+					if(this.isUpLoad) {
+						this.i += 1;
+						this.getGoodsList(this.i)
+							.then((result) => {
+								this.list = this.list.concat(result.data.data);
+								this.scroll.finishPullUp();
+								this.scroll.refresh(); //刷新组件
+								this.isUpLoad = false;
+							});
+					}
+				});
+			});
+		},
+		methods: {
+			//获取商品列表,i：第几页
+			getGoodsList(i) {
+				return this.axios.get('/api/goods/', {
+					params: {
+						pageIndex: i,
+						pageSize: 3,
+						//						cate_2nd: this.id
+					}
+				});
+			}
 		}
 	}
 </script>
 
 <style scoped lang="scss">
-	@charset "utf-8";
-	* {
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		text-decoration: none;
-	}
-	
-	::-webkit-scrollbar {
-		width: 0;
-		height: 0;
-	}
-	
 	.container {
+		position: relative;
+		padding-top: 88px;
+		height: 100vh;
+		box-sizing: border-box;
+	}
+	
+	.fixed-bar {
+		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100%;
-		max-width: 375px;
-		margin: 0 auto;
-		padding: 0;
+		height: 88px;
 	}
 	
-	.listhead .headline {
-		height: 45px;
-		display: flex;
-		background: white;
-	}
-	
-	.listhead .headline img {
-		width: 39px;
+	.wrapper {
 		height: 100%;
-	}
-	
-	.listhead .headline .text {
-		color: rgb(51, 51, 51);
-		font-size: 16px;
-		width: 285px;
-		text-align: center;
-		line-height: 45px;
-	}
-	
-	.navline {
-		width: 375px;
-		height: 30px;
 		overflow: hidden;
 	}
 	
-	.listcontent {
-		width: 100%;
-	}
-	
-	.listcontent .itemlist {
-		width: 100%;
-	}
-	
-	.listcontent .itemlist .item {
-		width: 48%;
-		margin: 0 1%;
-		float: left;
+	.goodsList {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		.item {
+			width: 48%;
+			margin: 0 1%;
+		}
 	}
 	
 	.top {

@@ -61,7 +61,6 @@
 
 <style scoped lang="scss">
 	.navline {
-		width: 375px;
 		height: 40px;
 		overflow: hidden;
 		border-bottom: 2px solid rgb(191, 191, 192);

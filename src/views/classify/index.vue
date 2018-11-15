@@ -20,10 +20,12 @@
 					</div>
 					<ul class="item-list">
 						<li v-for="item in cate_2nd">
-							<div class="pic">
-								<img src="../../assets/img/qqq.png" />
-							</div>
-							<div class="name">{{item.name}}</div>
+							<router-link :to="{ name: 'GoodsList', params: { id: item.id }}">
+								<div class="pic">
+									<img src="../../assets/img/qqq.png" />
+								</div>
+								<div class="name">{{item.name}}</div>
+							</router-link>
 						</li>
 					</ul>
 				</div>

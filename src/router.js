@@ -35,7 +35,8 @@ let router = new Router({
 	}, {
 		path: '/goods/list/:id',
 		name: 'GoodsList',
-		component: GoodsList
+		component: GoodsList,
+		props: true,
 	}, {
 		path: '/cart',
 		name: 'cart',
