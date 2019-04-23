@@ -56,7 +56,7 @@
 		},
 		methods: {
 			registerHandle() {
-				this.axios.post('/users/login', {
+				this.axios.post('/api/user/login', {
 						username: this.tel,
 						password: this.password
 					})
