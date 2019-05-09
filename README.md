@@ -1,6 +1,6 @@
 # vue-mall
 
-基于vue+vue-router+axios搭建商城后台
+基于vue+vue-router+axios搭建手机端商城
 
 ## Project setup
 ```
